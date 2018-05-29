@@ -1,12 +1,12 @@
-public class Padre extends Abuelo {
-    public Padre() {
+public class Padre {
+    private final int numero;
+    public Padre(int numero) {
+        this.numero = numero;
     }
-    public Padre(String s) {
-        super(s);
+    public int suma() {
+        return numero + 1;
     }
-    public String toString(int i) {
-        return "padre" + super.toString();
+    public int getNumero() {
+        return numero;
     }
 }
-
-

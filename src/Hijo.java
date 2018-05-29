@@ -1,9 +1,12 @@
-public class Hijo extends Padre{
-    private int i;
-    public Hijo(int i) {
-        this.i = i;
+public class Hijo extends Padre {
+    public Hijo(int numero) {
+        super(numero);
     }
-    public String toString() {
-        return super.toString() + ",i:" + i;
+    @Override
+    public int suma() {
+        return super.suma() + 1;
+    }
+    public int resta() {
+        return getNumero() - 1;
     }
 }

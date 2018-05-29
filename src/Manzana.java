@@ -1,29 +1,19 @@
-import java.util.Comparator;
-import java.util.Objects;
+import javax.swing.*;
+import java.util.*;
 
-public class Manzana implements Comparable {
+public class Manzana{
 
     private int sabor;
 
-    public Manzana() {
-        sabor = 4;
-    }
-
     public Manzana(int sabor) {
-        try {
-            if (sabor < 0 || sabor > 10) {
-                throw new IllegalArgumentException();
-            } else {
-                this.sabor = sabor;
-            }
-        } catch (IllegalArgumentException e) {
-            e.printStackTrace();
+        if (sabor<0 || sabor>10){
+            throw new IllegalArgumentException("Rango de sabor erróneo");
         }
+        this.sabor = sabor;
     }
 
-    @Override
-    public String toString() {
-        return "manzana" + sabor;
+    public Manzana() {
+        this.sabor=5;
     }
 
     public int getSabor() {
@@ -31,7 +21,9 @@ public class Manzana implements Comparable {
     }
 
     @Override
-    public int compareTo(Object o) {
-        return this.getSabor() - ((Manzana) o).getSabor();
+    public String toString() {
+        return "La manzana tiene de sabor: "+this.sabor;
     }
+
+
 }
