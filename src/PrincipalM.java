@@ -15,7 +15,7 @@ public class PrincipalM {
         cesta.add(new Manzana());
         cesta.add(podrida);
         cesta.remove((Integer)0);
-        Collections.sort(cesta);
+        //Collections.sort(cesta);
 
 
         for (Manzana nombre: cesta) {
